@@ -1,26 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Crimson+Pro:ital,wght@0,300;0,400;1,300;1,400&family=DM+Mono:wght@300;400&display=swap');
 
-/* ── BASE ── */
 .main {
   background: var(--black);
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
   min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;
   overflow-y: auto;
   overflow-x: hidden;
+  scroll-snap-type: y mandatory;
 }
 
-
-/* ── HERO ── */
 .hero {
   scroll-snap-align: start;
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
   min-height: 100vh;
   min-height: 100svh;
+  min-height: 100dvh;
   overflow: hidden;
   display: grid;
 }
@@ -34,11 +30,11 @@
 .heroImage img {
   width: 100%;
   height: 100%;
+  display: block;
   object-fit: cover;
   object-position: center center;
   filter: saturate(1.1) contrast(1.05);
 }
-
 
 .heroHeadline {
   position: static;
@@ -693,7 +689,7 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
 
   .heroTitle {
     font-size: clamp(100px, 36vw, 150px);
-    bottom: 3rem;              /* lift above CTA */
+    bottom: 6rem;              /* lift above CTA */
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: -0.03em;
