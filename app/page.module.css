@@ -6,6 +6,10 @@
   height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 
@@ -15,6 +19,8 @@
   position: relative;
   width: 100vw;
   height: 100vh;
+  min-height: 100vh;
+  min-height: 100svh;
   overflow: hidden;
   display: grid;
 }
@@ -677,9 +683,13 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
 @media (max-width: 480px) {
 
   /* ── IMAGE — center on her face ── */
- .hero {
+.hero {
+    width: 100%;
+    height: 100svh;
+    min-height: 100svh;
     overflow: hidden;
   }
+
 
   .heroTitle {
     font-size: clamp(100px, 36vw, 150px);
@@ -694,30 +704,40 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
     object-position: 55% top;
   }
 
-  .heroBottomBlock {
+ .heroBottomBlock {
     position: absolute;
-    bottom: env(safe-area-inset-bottom, 1.5rem);
-    padding-bottom: 1.5rem;
-    left: 1.5rem;              /* gives text room to breathe */
+    left: 1.5rem;
     right: 1.5rem;
+    bottom: max(env(safe-area-inset-bottom), 1.5rem);
+    padding-bottom: 1.5rem;
     z-index: 10;
+
     display: flex;
     flex-direction: column;
     gap: 0.85rem;
+
+    transform: none;
+    width: auto;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .heroHeadline {
     font-size: 0.7rem;
     letter-spacing: 0.06em;
-    white-space: normal;       /* allow wrapping if needed */
+    white-space: normal;  
+        max-width: 18rem;
+
   }
 
   .heroCta {
     font-size: 0.75rem;
     padding: 0.65rem 1.25rem;
     width: fit-content;
+    min-width: unset;
+
   }
-}
+
 
   .pageNav {
     font-size: 0.5rem;
@@ -726,8 +746,12 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
   }
 
   .metaTopLeft {
+    top: 1.25rem;
+    left: 1.25rem;
+    font-size: 0.55rem;
     font-size: 0.55rem;
   }
+}
 
 /* ── HAMBURGER BUTTON ── */
 .navToggle {
@@ -801,8 +825,8 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
 
 .navOverlayLink:hover {
   color: #d4071b;
-}
 
+}
 /* ── RESPONSIVE SWAP ── */
 @media (max-width: 768px) {
   .navToggle {
