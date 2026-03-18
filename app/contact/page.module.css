@@ -1,0 +1,230 @@
+.main {
+  min-height: 100vh;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10vh;
+  height: 50vh;
+}
+
+.header {
+  padding: 8rem 2.5rem 2rem;
+}
+
+.label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(80px, 14vw, 200px);
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  margin: 0;
+  color: #ffffff;
+}
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin-top: 2rem;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 0;
+  padding: 3rem 2.5rem 4rem;  /* reduced padding */
+  flex: 1;                     /* fills remaining space */
+  align-items: start;          /* don't stretch content */
+}
+
+@media (max-width: 860px) {
+  .body {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+.left {
+  padding-right: 4rem;
+  border-right: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+@media (max-width: 860px) {
+  .left {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 3rem;
+  }
+}
+
+.intro {
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.detailRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.detailRow:last-child {
+  border-bottom: none;
+}
+
+.detailLabel {
+  font-size: 0.6rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.4;
+}
+
+.detailValue {
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.right {
+  padding-left: 4rem;
+}
+
+@media (max-width: 860px) {
+  .right {
+    padding-left: 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.fieldLabel {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.fieldInput,
+.fieldSelect,
+.fieldTextarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  padding: 0.75rem 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+.fieldInput::placeholder,
+.fieldTextarea::placeholder {
+  opacity: 0.3;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.fieldInput:focus,
+.fieldSelect:focus,
+.fieldTextarea:focus {
+  border-bottom-color: #ffffff;
+}
+
+.fieldSelect option {
+  background: #0a0a0a;
+  color: #ffffff;
+}
+
+.fieldTextarea {
+  resize: none;
+  line-height: 1.7;
+}
+
+.submitBtn {
+  display: inline-block;
+  width: fit-content;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 0.85rem 1.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submitBtn:hover {
+  background: #ffffff;
+  color: #0a0a0a;
+}
+
+.submitBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.successMessage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 3rem 0;
+}
+
+.successMessage p {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.errorMessage {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #c8102e;
+  opacity: 0.9;
+}
