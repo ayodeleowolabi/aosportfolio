@@ -195,7 +195,7 @@
   align-items: flex-end;
   gap: 0.4rem;
   font-family: 'DM Mono', monospace;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--white);
@@ -264,6 +264,7 @@
 }
 .workHeader {
   padding: 6rem 2.5rem 1.5rem;
+  margin-top: 2rem;
   border-bottom: 1px solid rgba(255,255,255,0.2);
   margin-bottom: 0;
   z-index: 1;
@@ -577,22 +578,41 @@
   font-family: 'DM Mono', monospace;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1900px) {
   .filmStrip {
     flex-direction: column;
     height: auto;
     padding: 1rem;
+    gap: 12px;
   }
 
   .filmCard {
-    height: 50vw;
+    height: 56vw;
     border-radius: 12px;
+    flex: none;
+    width: 100%;
+    transition: none;
   }
 
   .filmCard:hover {
-    flex: 1;
+    flex: none;
   }
 
+  .filmCard:hover .filmPreview iframe {
+    transform: scale(1);
+    transition: none;
+  }
+
+  .filmCard:hover .filmMeta {
+    opacity: 1;
+    transform: translateY(0);
+    transition: none;
+  }
+
+  .filmMeta {
+    opacity: 1;
+    transform: translateY(0);
+  }
 
   .heroTitle {
     left: 50%;
@@ -604,4 +624,40 @@
     white-space: nowrap;
     opacity: 0.92;
   }
-} 
+   .aboutPage {
+    grid-template-columns: 1fr;
+    padding: 6rem 1.5rem 8rem;
+    align-items: start;
+    padding: 4rem;
+  }
+
+ .aboutName {
+  margin-top: 13rem;
+    align-items: center;
+    text-align: center;
+    align-self: start;     /* ADD THIS */
+  }
+
+  .aboutName span {
+    font-size: clamp(3.5rem, 18vw, 7rem);
+    line-height: 0.9;
+  }
+
+  .aboutRight {
+    align-items: center;
+    text-align: center;
+  }
+
+  .aboutBody p {
+    text-align: left;
+    font-size: clamp(1rem, 1vw, 1.5rem);
+  }
+
+  .aboutMeta {
+    justify-content: center;
+  }
+
+  .aboutCTA {
+    align-self: center;
+  }
+}
