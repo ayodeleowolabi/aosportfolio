@@ -374,10 +374,10 @@
   background: var(--black);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 6rem 4rem;
+  padding: 8rem 4rem 4rem;  /* increase top padding */
   position: relative;
   gap: 4rem;
-  align-items: center;    /* vertically center both columns */
+  align-items: center;       /* ADD THIS — vertically centers both columns */
 }
 
 .aboutName {
@@ -404,9 +404,9 @@
 .aboutRight {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
   gap: 2.5rem;
-    padding-top: 2rem;    
+  padding-top: 0;            /* remove the extra top padding we added */
 }
 
 .aboutBody {
@@ -634,31 +634,26 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
     text-align: center;
   }
 
-  .aboutPage {
-    margin-top: 15rem;
-   
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 1.5rem 3rem;
+   .aboutPage {
+    grid-template-columns: 1fr;
+    padding: 6rem 2rem 4rem;
     gap: 2rem;
-    overflow: hidden;
+    align-items: start;
   }
 
-  .aboutName {
-    align-items: flex-start;
-    text-align: left;
-    margin-top: 0;
+ .aboutName {
+    text-align: center;
+    margin-top: 10rem;
   }
+
 
   .aboutName span {
-    font-size: clamp(3rem, 15vw, 6rem);
-    line-height: 0.9;
+    font-size: clamp(3.5rem, 12vw, 7rem);
+    text-align: center;
   }
 
-  .aboutRight {
-    align-items: flex-start;
-    text-align: left;
-    gap: 1.5rem;
+ .aboutRight {
+    padding-top: 0;
   }
 
   .aboutBody p {
