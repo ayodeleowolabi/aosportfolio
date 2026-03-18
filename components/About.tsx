@@ -14,11 +14,13 @@ export default function About() {
         </div>
 
         <div className={styles.aboutRight}>
-          <div className={styles.aboutBody}>
-            <p>I build for creative people because I understand what's at stake. A weak website doesn't just look bad — it undermines everything you've built. Your commitment, your craft, your years of work. I've been on that stage. I know what it costs to show up at the highest level and have nothing backing you up online.</p>
-            <p>I'm a web developer and interdisciplinary artist — former math and music teacher and a working artist across the US, Spain, Portugal, and the UK. I understand your world because I live in it.</p>
-            <p>When we work together, your website will finally match the level you're already operating at.</p>
-          </div>
+         <div className={styles.aboutBody}>
+  <p>I build websites for people who take their work seriously.</p>
+  <p>Whether you're a creative, a small business owner, or an independent professional — if you've put in the years building something real, your website should reflect that. Not a template. Not something generic. Something that actually looks like you and works like a business.</p>
+  <p>A weak website doesn't just look bad, it undermines everything you've built. Your commitment, your craft, your reputation. I know what it costs to show up at the highest level and have nothing backing you up online.</p>
+  <p>I'm Ayo, founder of AOS Studio. I'm a web developer and working artist who has performed at the Kennedy Center, the Apollo Theater, and the White House, and toured internationally across the US, Spain, Portugal, and the UK. I understand what it means to have a brand, a presence, and a story worth telling because I live that life too.</p>
+  <p>Every project starts with who you are. You send me your vision, your world, your inspiration and I will build something custom, fully coded, and fully deployed.</p>
+</div>
           <a href="/contact" className={styles.aboutCTA}>Let's Work →</a>
         </div>
 
