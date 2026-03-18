@@ -13,7 +13,7 @@ export default function Work() {
       <div className={styles.filmStrip}>
         {projects.map((project) => (
           
-           <a key={project.number}
+           <a key={project.url}              // ← unique key, fixes the console error
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
@@ -22,15 +22,15 @@ export default function Work() {
             <div className={styles.filmPreview}>
               <iframe
                 src={project.url}
-                title={project.client}
+                title={project.category}   // ← was project.client which is also empty
                 scrolling="no"
                 loading="lazy"
               />
               <div className={styles.filmOverlay} />
             </div>
             <div className={styles.filmMeta}>
-              <span className={styles.filmNumber}>0{project.number}</span>
-              <span className={styles.filmClient}>{project.client}</span>
+              {/* filmNumber span removed */}
+              <span className={styles.filmClient}>{project.category}</span>
             </div>
           </a>
         ))}

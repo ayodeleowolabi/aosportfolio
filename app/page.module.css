@@ -689,3 +689,88 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
     font-size: 0.55rem;
   }
 }
+
+/* ── HAMBURGER BUTTON ── */
+.navToggle {
+  display: none; /* hidden on desktop */
+  position: fixed;
+  top: 1.75rem;
+  right: 1.75rem;
+  z-index: 300;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navToggle span {
+  display: block;
+  width: 26px;
+  height: 1.5px;
+  background: var(--white);
+  transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+/* Animate to X */
+.navToggleOpen span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.navToggleOpen span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.navToggleOpen span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* ── FULL-SCREEN OVERLAY ── */
+.navOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 2rem;
+
+  /* Animate in */
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.navOverlayOpen {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.navOverlayLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.navOverlayLink {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3rem, 14vw, 5.5rem);
+  letter-spacing: 0.04em;
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.navOverlayLink:hover {
+  color: #d4071b;
+}
+
+/* ── RESPONSIVE SWAP ── */
+@media (max-width: 768px) {
+  .navToggle {
+    display: flex; /* show hamburger */
+  }
+
+  .desktopNav {
+    display: none; /* hide the old nav */
+  }
+}

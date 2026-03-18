@@ -1,7 +1,6 @@
 export const projects = [
   {
-    number: "001",
-    client: "Sahel Ensemble",
+    client: "",
     category: "Band & Performance",
     description: "Custom site for DC's premier African diasporic music ensemble. Performers at the Kennedy Center Millennium Stage.",
     stack: "React — Vite — Netlify",
@@ -9,8 +8,7 @@ export const projects = [
     year: "2026",
   },
   {
-    number: "002",
-    client: "Atlantic Aerial",
+    client: "",
     category: "Drone Videography",
     description: "Brand site for a drone videography company. Built to convert — clean, fast, visual.",
     stack: "Next.js — Tailwind",
@@ -18,8 +16,7 @@ export const projects = [
     year: "2026",
   },
   {
-    number: "003",
-    client: "Black Atlantic",
+    client: "",
     category: "Creative Brand",
     description: "Personal brand site for Jean-Francis. Bold identity, custom design, fast build.",
     stack: "React — Vite — Tailwind",
@@ -27,8 +24,7 @@ export const projects = [
     year: "2026",
   },
   {
-    number: "004",
-    client: "iothesinger",
+    client: "",
     category: "Artist Website",
     description: "Personal site for iothesinger, a DC-based singer-songwriter. Clean design, smooth UX, and a custom audio player.",
     stack: "Next.js — TypeScript",
@@ -36,8 +32,8 @@ export const projects = [
     year: "2026",
   },
   {
-    number: "005",
-    client: "Ayodele Owolabi",
+
+    client: "",
     category: "Artist Website",
     description: "My personal site and portfolio. AOS is a reflection of my creative journey and a showcase of my work in the creative world.",
     stack: "React — Vite — Tailwind",
