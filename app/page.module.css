@@ -406,7 +406,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 2.5rem;
-  padding-top: 0;            /* remove the extra top padding we added */
+  padding-top: 5rem;            /* remove the extra top padding we added */
 }
 
 .aboutBody {
@@ -580,6 +580,7 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
   color: #ffffff;
   font-family: 'DM Mono', monospace;
 }
+
 
 /* ── TABLET AND BELOW — stack the film strip ── */
 /* ── TABLET AND BELOW ── */
