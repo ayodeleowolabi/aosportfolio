@@ -580,7 +580,8 @@
   font-family: 'DM Mono', monospace;
 }
 
-@media (max-width: 1900px) {
+/* ── TABLET AND BELOW — stack the film strip ── */
+@media (max-width: 1024px) {
   .filmStrip {
     flex-direction: column;
     height: auto;
@@ -616,18 +617,32 @@
     transform: translateY(0);
   }
 
-   .aboutPage {
-    grid-template-columns: 1fr;
-    padding: 6rem 1.5rem 8rem;
-    align-items: start;
-    padding: 4rem;
+  .heroTitle {
+    font-size: clamp(120px, 40vw, 280px);
+    bottom: 4rem;
   }
 
- .aboutName {
-  margin-top: 13rem;
+  .heroMessage {
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 90%;
     align-items: center;
     text-align: center;
-    align-self: start;     /* ADD THIS */
+  }
+
+  .aboutPage {
+    grid-template-columns: 1fr;
+    padding: 4rem 1.5rem;
+    align-items: start;
+  }
+
+  .aboutName {
+    align-items: center;
+    text-align: center;
+    align-self: start;
+    margin-top: 0;
   }
 
   .aboutName span {
@@ -642,7 +657,6 @@
 
   .aboutBody p {
     text-align: left;
-    font-size: clamp(1rem, 1vw, 1.5rem);
   }
 
   .aboutMeta {
@@ -654,3 +668,20 @@
   }
 }
 
+/* ── PHONE ONLY ── */
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: clamp(80px, 30vw, 160px);
+    bottom: 5rem;
+  }
+
+  .pageNav {
+    font-size: 0.5rem;
+    gap: 0.3rem;
+    right: 1rem;
+  }
+
+  .metaTopLeft {
+    font-size: 0.55rem;
+  }
+}
