@@ -676,9 +676,14 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
 /* ── PHONE ONLY ── */
 @media (max-width: 480px) {
   .heroTitle {
-    font-size: clamp(80px, 30vw, 160px);
-    bottom: 5rem;
+    font-size: clamp(100px, 42vw, 180px);
+    bottom: 2rem;
+    letter-spacing: -0.03em;
+    white-space: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
   }
+}
 
   .pageNav {
     font-size: 0.5rem;
@@ -689,7 +694,6 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
   .metaTopLeft {
     font-size: 0.55rem;
   }
-}
 
 /* ── HAMBURGER BUTTON ── */
 .navToggle {
