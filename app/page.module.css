@@ -693,7 +693,7 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
 
   .heroTitle {
     font-size: clamp(100px, 36vw, 150px);
-    bottom: 8rem;              /* lift above CTA */
+    bottom: 3rem;              /* lift above CTA */
     left: 50%;
     transform: translateX(-50%);
     letter-spacing: -0.03em;
@@ -718,8 +718,8 @@ font-size: clamp(0.85rem, 1.1vw, 1.1rem);  line-height: 2;
 
     transform: none;
     width: auto;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
   }
 
   .heroHeadline {
