@@ -8,6 +8,7 @@
   scroll-snap-type: y mandatory;
 }
 
+
 /* ── HERO ── */
 .hero {
   scroll-snap-align: start;
@@ -31,6 +32,7 @@
   object-position: center center;
   filter: saturate(1.1) contrast(1.05);
 }
+
 
 .heroHeadline {
   position: static;
@@ -614,16 +616,6 @@
     transform: translateY(0);
   }
 
-  .heroTitle {
-    left: 50%;
-    bottom: -1.5rem;
-    transform: translateX(-50%);
-    font-size: 48vw;
-    line-height: 0.9;
-    letter-spacing: -0.03em;
-    white-space: nowrap;
-    opacity: 0.92;
-  }
    .aboutPage {
     grid-template-columns: 1fr;
     padding: 6rem 1.5rem 8rem;
@@ -661,3 +653,4 @@
     align-self: center;
   }
 }
+
